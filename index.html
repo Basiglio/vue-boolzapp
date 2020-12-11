@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <title></title>
   </head>
   <body>
     <div class="container">
-      <div class="wrapper">
+      <div class="wrapper" id="app">
         <div id="left_column">
           <div id="top_left_column">
             <div id="user_logo">
@@ -29,11 +29,11 @@
               <h4>Ricevi notifiche dei nuovi messaggi</h4>
             </div>
             <input type="text" name="" value="" placeholder="&#128269; Cerca o inizia una nuova chat">
-            <div class="chat">
-              <img src="https://i.pinimg.com/originals/17/56/8f/17568fcd478e0699067ca7b9a34c702f.png" alt="">
+            <div class="chat" v-for="contact in contacts" :key="contact.name">
               <div class="info_chat">
-                <h4>Emilio</h4>
-                <p>Ciao come stai?</p>
+                <img src="contacts.avatar" alt="">
+                <h4>{{contact.name}}</h4>
+                <p></p>
               </div>
             </div>
           </div>
@@ -61,5 +61,6 @@
         </div>
       </div>
     </div>
+    <script src="js/myscript.js" charset="utf-8"></script>
   </body>
 </html>
