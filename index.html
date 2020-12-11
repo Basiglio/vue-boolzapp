@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <title></title>
   </head>
@@ -31,7 +32,7 @@
             <input type="text" name="" value="" placeholder="&#128269; Cerca o inizia una nuova chat">
             <div class="chat" v-for="contact in contacts" :key="contact.name" :key=contact.avatar>
               <div class="info_chat">
-                <img src="{{contact.avatar}}" alt="">
+                <img src="contact.avatar" alt="">
                 <h4>{{contact.name}}</h4>
                 <p></p>
               </div>
