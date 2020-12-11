@@ -29,9 +29,9 @@
               <h4>Ricevi notifiche dei nuovi messaggi</h4>
             </div>
             <input type="text" name="" value="" placeholder="&#128269; Cerca o inizia una nuova chat">
-            <div class="chat" v-for="contact in contacts" :key="contact.name">
+            <div class="chat" v-for="contact in contacts" :key="contact.name" :key=contact.avatar>
               <div class="info_chat">
-                <img src="contacts.avatar" alt="">
+                <img src="{{contact.avatar}}" alt="">
                 <h4>{{contact.name}}</h4>
                 <p></p>
               </div>
