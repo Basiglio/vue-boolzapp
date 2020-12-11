@@ -5,7 +5,7 @@ var app = new Vue({
     [
 	{
 		name: 'Michele',
-		avatar: 'https://i.pinimg.com/originals/17/56/8f/17568fcd478e0699067ca7b9a34c702f.png',
+		avatar: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/10_avatar-512.png',
 		visible: true,
 		messages: [
 			{
@@ -27,7 +27,7 @@ var app = new Vue({
 	},
 	{
 		name: 'Fabio',
-		avatar: 'https://i.pinimg.com/originals/17/56/8f/17568fcd478e0699067ca7b9a34c702f.png',
+		avatar: 'https://cdn.iconscout.com/icon/free/png-256/avatar-367-456319.png',
 		visible: true,
 		messages: [
 			{
@@ -49,7 +49,7 @@ var app = new Vue({
 	},
 	{
 		name: 'Samuele',
-		avatar: 'https://i.pinimg.com/originals/17/56/8f/17568fcd478e0699067ca7b9a34c702f.png',
+		avatar: 'https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png',
 		visible: true,
 		messages: [
 			{
@@ -71,7 +71,7 @@ var app = new Vue({
 	},
 	{
 		name: 'Luisa',
-		avatar: 'https://i.pinimg.com/originals/17/56/8f/17568fcd478e0699067ca7b9a34c702f.png',
+		avatar: 'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/girl_female_woman_avatar-512.png',
 		visible: true,
 		messages: [
 			{
