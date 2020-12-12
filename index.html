@@ -39,7 +39,8 @@
               <img :src="contact.avatar" alt="">
               <div class="info_chat">
                 <h4>{{contact.name}}</h4>
-                <p v-for="message in contacts.messages">{{message.text}}</p>
+                <p v-for="info in contact.messages">{{info.text}}</p>
+                <h6 v-for="info in contact.messages">{{info.date}}</h6>
               </div>
             </div>
           </div>
@@ -60,12 +61,27 @@
             </div>
           </div>
           <div id="mid_right_column">
-            <div class="received"><p>Hai portato a spasso il cane?</p> </div>
+            <div class="received"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p> </div>
             <div class="sent"><p>No! Vado adesso</p></div>
             <div class="sent"><p>Hai fatto la spesa?</p></div>
             <div class="received"><p>Si, sto tornando adesso</p></div>
             <div class="sent"><p>Ok ti aspetto!</p></div>
             <div class="received"><p>Hai portato a spasso il cane?</p> </div>
+            <div class="sent"><p>No! Vado adesso</p></div>
+            <div class="received"><p>Si, sto tornando adesso</p></div>
+            <div class="sent"><p>Ok ti aspetto!</p></div>
+            <div class="received"><p>Hai portato a spasso il cane?</p> </div>
+            <div class="sent"><p>No! Vado adesso</p></div>
+            <div class="sent"><p>No! Vado adesso</p></div>
+            <div class="sent"><p>Hai fatto la spesa?</p></div>
+            <div class="received"><p>Si, sto tornando adesso</p></div>
+            <div class="sent"><p>Ok ti aspetto!</p></div>
+            <div class="received"><p>Hai portato a spasso il cane?</p> </div>
+            <div class="sent"><p>No! Vado adesso</p></div>
+            <div class="received"><p>Si, sto tornando adesso</p></div>
+            <div class="sent"><p>Ok ti aspetto!</p></div>
+            <div class="received"><p>Hai portato a spasso il cane?</p> </div>
+            <div class="sent"><p>No! Vado adesso</p></div>
             <div class="sent"><p>No! Vado adesso</p></div>
           </div>
           <div id="bot_right_column">
