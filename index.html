@@ -16,9 +16,9 @@
               <img src="https://i.pinimg.com/originals/17/56/8f/17568fcd478e0699067ca7b9a34c702f.png" alt="logo">
             </div>
             <div id="user">
-              <h2>Nome Utente</h2>
+              <h2>{{userName}}</h2>
             </div>
-            <div id="tools">
+            <div class="tools">
               <i class="fas fa-circle-notch"></i>
               <i class="fas fa-comment-alt"></i>
               <i class="fas fa-ellipsis-v"></i>
@@ -26,27 +26,47 @@
           </div>
           <div id="bot_left_column">
             <div id="notify">
-              <i class="fas fa-bell-slash"></i>
-              <h4>Ricevi notifiche dei nuovi messaggi</h4>
+              <div class="alert">
+                <i class="fas fa-bell-slash"></i>
+              </div>
+              <div class="alert_messages">
+                <h4>Ricevi notifiche dei nuovi messaggi</h4>
+                <a href="#">Attiva le notifiche desktop</a>
+              </div>
             </div>
             <input type="text" name="" value="" placeholder="&#128269; Cerca o inizia una nuova chat">
             <div class="chat" v-for="contact in contacts">
               <img :src="contact.avatar" alt="">
               <div class="info_chat">
                 <h4>{{contact.name}}</h4>
-                <p>{{contact.name}}</p>
+                <p v-for="message in contacts.messages">{{message.text}}</p>
               </div>
             </div>
           </div>
         </div>
         <div id="right_column">
-          <div id="top_right_column"></div>
+          <div id="top_right_column">
+            <div class="message_avatar">
+              <img src="https://i.pinimg.com/originals/17/56/8f/17568fcd478e0699067ca7b9a34c702f.png" alt="">
+            </div>
+            <div class="message_info">
+              <h4>NOME</h4>
+              <p>ULTIMO ACCESSO</p>
+            </div>
+            <div class="tools">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-paperclip"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
           <div id="mid_right_column">
             <div class="received"><p>Hai portato a spasso il cane?</p> </div>
             <div class="sent"><p>No! Vado adesso</p></div>
             <div class="sent"><p>Hai fatto la spesa?</p></div>
             <div class="received"><p>Si, sto tornando adesso</p></div>
             <div class="sent"><p>Ok ti aspetto!</p></div>
+            <div class="received"><p>Hai portato a spasso il cane?</p> </div>
+            <div class="sent"><p>No! Vado adesso</p></div>
           </div>
           <div id="bot_right_column">
             <div class="text_area_icon">
