@@ -35,12 +35,12 @@
               </div>
             </div>
             <input type="text" name="" value="" placeholder="&#128269; Cerca o inizia una nuova chat">
-            <div class="chat" v-for="contact in contacts">
+            <div class="chat" v-for="(contact, index) in contacts" @click="selectUser(index)">
               <img :src="contact.avatar" alt="">
               <div class="info_chat">
                 <h4>{{contact.name}}</h4>
-                <p v-for="(info, index) in contact.messages">{{info.text}} {{index}}</p>
-                <h6 v-for="(info, index) in contact.messages">{{info.date}}</h6>
+                <p>{{contact.messages[contact.messages.length - 1].text}}</p>
+                <h6>{{contact.messages[contact.messages.length - 1].date}}</h6>
               </div>
             </div>
           </div>
@@ -62,9 +62,8 @@
           </div>
           <div id="mid_right_column">
             <!-- CICLO SU CONTACTS -->
-            <div v-for="contact in contacts" class="received">
-              <!-- CICLO SUL PRIMO CONTATTO -->
-              <p v-for="(info, index) in contact.messages">{{info}}></p>
+            <div v-for="post in selectedUser">
+              <p>{{post}}</p>
             </div>
           </div>
           <div id="bot_right_column">
