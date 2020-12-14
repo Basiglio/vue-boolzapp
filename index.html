@@ -39,7 +39,7 @@
               <img :src="contact.avatar" alt="">
               <div class="info_chat">
                 <h4>{{contact.name}}</h4>
-                <p v-for="(info, index) in contact.messages">{{info.text}}</p>
+                <p v-for="(info, index) in contact.messages">{{info.text}} {{index}}</p>
                 <h6 v-for="(info, index) in contact.messages">{{info.date}}</h6>
               </div>
             </div>
