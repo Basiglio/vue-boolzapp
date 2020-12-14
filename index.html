@@ -62,8 +62,8 @@
           </div>
           <div id="mid_right_column">
             <!-- CICLO SU CONTACTS -->
-            <div v-for="post in selectedUser">
-              <p>{{post}}</p>
+            <div v-for="post in selectedUser.messages" class="sent">
+              <p>{{post.text}}</p>
             </div>
           </div>
           <div id="bot_right_column">

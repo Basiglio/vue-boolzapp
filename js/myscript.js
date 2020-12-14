@@ -2,7 +2,6 @@ var app = new Vue({
   el: '#app',
   data: {
     userName: "Basiglio",
-    selectedUser: {},
     contacts:
     [
 	{
@@ -88,13 +87,16 @@ var app = new Vue({
 			}
 		],
 	},
-]
+],
+   selectedUser: {},
   },
   methods: {
-    selectUser: function(userIndex) {
-      console.log(userIndex);
-      this.selectedUser == this.userIndex;
+    selectUser: function(index) {
+      console.log(index);
+      console.log(this.contacts[index])
+      this.selectedUser = this.contacts[index];
       console.log(this.selectedUser);
     }
+
   }
 })
