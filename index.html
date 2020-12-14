@@ -62,8 +62,9 @@
           </div>
           <div id="mid_right_column">
             <!-- CICLO SU CONTACTS -->
-            <div v-for="post in selectedUser.messages" class="sent">
-              <p>{{post.text}}</p>
+            <div v-for="post in selectedUser.messages">
+              <div v-if="post.status == 'sent' " :class=" 'sent' : post.status == 'sent' " class="">{{post.text}}</div>
+              <div v-else="" :class=" 'received' : post.status == 'received' " class="">{{post.text}}</div>
             </div>
           </div>
           <div id="bot_right_column">

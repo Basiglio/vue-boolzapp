@@ -194,13 +194,12 @@ i {
 }
 .sent {
   background-color: #D5F9BA;
-  align-self: flex-end;
-  margin-right: 100px;
+  align-self: flex-start;
 }
 .received {
   background-color: #FFFFFF;
-  align-self: flex-start;
-  margin-left: 100px;
+  align-self: flex-end;
+  margin-left: 400px;
 }
 
 #bot_right_column {

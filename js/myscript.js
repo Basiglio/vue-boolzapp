@@ -90,6 +90,9 @@ var app = new Vue({
 ],
    selectedUser: {},
   },
+  created: function(){
+    this.selectedUser = this.contacts[0]
+  },
   methods: {
     selectUser: function(index) {
       console.log(index);
@@ -97,6 +100,5 @@ var app = new Vue({
       this.selectedUser = this.contacts[index];
       console.log(this.selectedUser);
     }
-
   }
 })
