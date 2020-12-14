@@ -62,12 +62,10 @@
           </div>
           <div id="mid_right_column">
             <!-- CICLO SU CONTACTS -->
-            <div v-for="contact in contacts" class="sent">
-              <!-- CICLO SUI MESSAGGI -->
-              <p v-for="(info, index) in contact.messages">{{info.text}}></p>
+            <div v-for="contact in contacts" class="received">
+              <!-- CICLO SUL PRIMO CONTATTO -->
+              <p v-for="(info, index) in contact.messages">{{info.date}} {{index}}></p>
             </div>
-            <!-- <div class="received"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p> </div>
-            <div class="sent"><p>No! Vado adesso</p></div> -->
           </div>
           <div id="bot_right_column">
             <div class="text_area_icon">
