@@ -38,7 +38,7 @@
             <!-- SINTASSI TERNARIO (CONDIZIONE) ? VALORE 1 : VALORE 2 -->
             <div class="chat" v-for="(contact, index) in contacts"
              @click="selectUser(index)"
-             :class="(index == selectedUser) ? 'active' : '' ">
+             :class="[ index == selectedIndex ? 'active': '' ]">
               <img :src="contact.avatar" alt="">
               <div class="info_chat">
                 <h4>{{contact.name}}</h4>

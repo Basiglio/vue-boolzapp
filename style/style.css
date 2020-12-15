@@ -193,12 +193,12 @@ i {
   line-height: 30px;
 }
 .sent {
-  background-color: #D5F9BA;
+  background-color: #FFFFFF;
   align-self: flex-start;
   margin-left: 100px;
 }
 .received {
-  background-color: #FFFFFF;
+  background-color: #D5F9BA;
   align-self: flex-end;
   margin-right: 100px;
 }

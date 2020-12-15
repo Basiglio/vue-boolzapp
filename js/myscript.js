@@ -89,7 +89,8 @@ var app = new Vue({
 	},
 ],
 // CREO VARIABILE PER INDICE UTENTE ATTIVO
-   selectedUser: 0,
+  selectedIndex: 0,
+  selectedUser: {},
    // CREO VARIABILE PER PRELEVARE IL NUOVO MESSAGGIO DAL CAMPO INPUT
    newMessage: "",
   },
@@ -101,6 +102,7 @@ var app = new Vue({
       console.log(index);
       // selectedUser PRENDE L'INDICE CHE GLI PASSA IL CLICK
       this.selectedUser = this.contacts[index];
+      this.selectedIndex = index;
       console.log(this.selectedUser);
     },
 
@@ -109,11 +111,21 @@ var app = new Vue({
       var newObj = {
         date: 'oggi è il giorno di oggi',
         text: this.newMessage,
-        status: 'sent'
+        status: 'received'
       };
        // PUSHO L'OGGETTO PASSANDOGLI L'INDICE DELL'UTENTE ATTIVO IN QUEL MOMENTO
-      this.contacts.[this.selectedUser]messages.push(newObj);
-      console.log(newObj);
+      this.selectedUser.messages.push(newObj);
+      this.newMessage = "";
+
+      setTimeout(function () {
+        var newAutoObj = {
+          date: 'oggi è il giorno di oggi',
+          text: 'ok!',
+          status: 'sent'
+        };
+        console.log(this.selectedUser);
+         this.selectedUser.messages.push(newAutoObj);
+      }, 1000);
     }
   }
-})
+});
