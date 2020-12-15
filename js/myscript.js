@@ -88,7 +88,9 @@ var app = new Vue({
 		],
 	},
 ],
+// CREO VARIABILE PER INDICE UTENTE ATTIVO
    selectedUser: 0,
+   // CREO VARIABILE PER PRELEVARE IL NUOVO MESSAGGIO DAL CAMPO INPUT
    newMessage: "",
   },
   created: function(){
@@ -97,18 +99,21 @@ var app = new Vue({
   methods: {
     selectUser: function(index) {
       console.log(index);
+      // selectedUser PRENDE L'INDICE CHE GLI PASSA IL CLICK
       this.selectedUser = this.contacts[index];
       console.log(this.selectedUser);
     },
 
     addMessage: function(){
-    var newObj = {
-      date: 'oggi è il giorno di oggi',
-      text: this.newMessage,
-      status: 'sent'
-    };
-    this.contacts[this.selectedUser].messages.push(newObj);
-    console.log(newObj);
+      // CREO NUOVO OGGETTO CHE DEFINISCO COME UN OGGETTO GIA PRESENTE
+      var newObj = {
+        date: 'oggi è il giorno di oggi',
+        text: this.newMessage,
+        status: 'sent'
+      };
+       // PUSHO L'OGGETTO PASSANDOGLI L'INDICE DELL'UTENTE ATTIVO IN QUEL MOMENTO
+      this.contacts.[this.selectedUser]messages.push(newObj);
+      console.log(newObj);
     }
   }
 })
