@@ -93,6 +93,7 @@ var app = new Vue({
   selectedUser: {},
    // CREO VARIABILE PER PRELEVARE IL NUOVO MESSAGGIO DAL CAMPO INPUT
    newMessage: "",
+   searchN: "",
   },
   created: function(){
     this.selectedUser = this.contacts[0]
@@ -113,19 +114,25 @@ var app = new Vue({
         text: this.newMessage,
         status: 'received'
       };
-       // PUSHO L'OGGETTO PASSANDOGLI L'INDICE DELL'UTENTE ATTIVO IN QUEL MOMENTO
       this.selectedUser.messages.push(newObj);
       this.newMessage = "";
 
+      const arrayToPush = this.selectedUser.messages;
       setTimeout(function () {
         var newAutoObj = {
           date: 'oggi è il giorno di oggi',
           text: 'ok!',
           status: 'sent'
         };
-        console.log(this.selectedUser);
-         this.selectedUser.messages.push(newAutoObj);
+        arrayToPush.push(newAutoObj);
       }, 1000);
-    }
+    },
+
+    // searchName: function(value) {
+    //   filteredContacts = this.contacts.filter(this.name);
+    //   if (value == this.name) {
+    //     return this.name;
+    //   }
+    // }
   }
 });

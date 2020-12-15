@@ -34,7 +34,7 @@
                 <a href="#">Attiva le notifiche desktop</a>
               </div>
             </div>
-            <input type="text" name="" value="" placeholder="&#128269; Cerca o inizia una nuova chat">
+            <input type="text" name="" value="" placeholder="&#128269; Cerca o inizia una nuova chat" v-model="searchN" v-on:keyup.enter="searchName">
             <!-- SINTASSI TERNARIO (CONDIZIONE) ? VALORE 1 : VALORE 2 -->
             <div class="chat" v-for="(contact, index) in contacts"
              @click="selectUser(index)"
