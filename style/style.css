@@ -180,7 +180,7 @@ i {
   background-image: url("https://d2p8jjwwnx090z.cloudfront.net/197/409/849/-299996991-1tom01g-bk4or1htcdjhie5/large/file.jpg");
   overflow-y: auto;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   padding-bottom: 100px;
   padding-top: 100px;
@@ -195,11 +195,12 @@ i {
 .sent {
   background-color: #D5F9BA;
   align-self: flex-start;
+  margin-left: 100px;
 }
 .received {
   background-color: #FFFFFF;
   align-self: flex-end;
-  margin-left: 400px;
+  margin-right: 100px;
 }
 
 #bot_right_column {
@@ -234,4 +235,8 @@ i {
 #bot_right_column i {
   font-size: 30px;
   color: #6B7376;
+}
+
+.active {
+  background-color: grey;
 }

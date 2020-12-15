@@ -35,7 +35,8 @@
               </div>
             </div>
             <input type="text" name="" value="" placeholder="&#128269; Cerca o inizia una nuova chat">
-            <div class="chat" v-for="(contact, index) in contacts" @click="selectUser(index)">
+            <div class="chat" v-for="(contact, index) in contacts" :bind="(index == selectedUser) ? 'active' : '' "
+            @click="selectUser(index)">
               <img :src="contact.avatar" alt="">
               <div class="info_chat">
                 <h4>{{contact.name}}</h4>
@@ -51,7 +52,7 @@
               <img src="https://i.pinimg.com/originals/17/56/8f/17568fcd478e0699067ca7b9a34c702f.png" alt="">
             </div>
             <div class="message_info">
-              <h4>NOME</h4>
+              <h4>NOME UTENTE</h4>
               <p>ULTIMO ACCESSO</p>
             </div>
             <div class="tools">
@@ -62,10 +63,11 @@
           </div>
           <div id="mid_right_column">
             <!-- CICLO SU CONTACTS -->
-            <!-- <div v-for="post in selectedUser.messages">
-              <div v-if="post.status == 'sent' " :class=" 'sent' : post.status == 'sent' " class="">{{post.text}}</div>
-              <div v-else="" :class=" 'received' : post.status == 'received' " class="">{{post.text}}</div>
-            </div> -->
+            <!-- SINTASSI TERNARIO (CONDIZIONE) ? VALORE 1 : VALORE 2 -->
+            <div v-for="post in selectedUser.messages" :class="post.status">
+              {{post.text}}
+              <!-- <div class="chat">{{post.date}}</div> -->
+            </div>
           </div>
           <div id="bot_right_column">
             <div class="text_area_icon">
