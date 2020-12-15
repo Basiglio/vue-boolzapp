@@ -89,6 +89,7 @@ var app = new Vue({
 	},
 ],
    selectedUser: 0,
+   newMessage: "",
   },
   created: function(){
     this.selectedUser = this.contacts[0]
@@ -98,6 +99,16 @@ var app = new Vue({
       console.log(index);
       this.selectedUser = this.contacts[index];
       console.log(this.selectedUser);
+    },
+
+    addMessage: function(){
+    var newObj = {
+      date: 'oggi è il giorno di oggi',
+      text: this.newMessage,
+      status: 'sent'
+    };
+    this.contacts[this.selectedUser].messages.push(newObj);
+    console.log(newObj);
     }
   }
 })
