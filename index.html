@@ -36,7 +36,7 @@
             </div>
             <input type="text" name="" value="" placeholder="&#128269; Cerca o inizia una nuova chat" v-model="searchN" v-on:keyup.enter="searchName">
             <!-- SINTASSI TERNARIO (CONDIZIONE) ? VALORE 1 : VALORE 2 -->
-            <div class="chat" v-for="(contact, index) in contacts"
+            <div class="chat" v-for="(contact, index) in filteredContacts"
              @click="selectUser(index)"
              :class="[ index == selectedIndex ? 'active': '' ]">
               <img :src="contact.avatar" alt="">
@@ -64,7 +64,6 @@
             </div>
           </div>
           <div id="mid_right_column">
-            <!-- CICLO SU CONTACTS -->
             <div v-for="post in selectedUser.messages" :class="post.status">
               {{post.text}}
             </div>

@@ -94,14 +94,15 @@ var app = new Vue({
    // CREO VARIABILE PER PRELEVARE IL NUOVO MESSAGGIO DAL CAMPO INPUT
    newMessage: "",
    searchN: "",
+   filteredContacts: []
   },
   created: function(){
-    this.selectedUser = this.contacts[0]
+    this.selectedUser = this.contacts[0];
+    this.filteredContacts = this.contacts;
   },
   methods: {
     selectUser: function(index) {
       console.log(index);
-      // selectedUser PRENDE L'INDICE CHE GLI PASSA IL CLICK
       this.selectedUser = this.contacts[index];
       this.selectedIndex = index;
       console.log(this.selectedUser);
@@ -128,11 +129,19 @@ var app = new Vue({
       }, 1000);
     },
 
-    // searchName: function(value) {
-    //   filteredContacts = this.contacts.filter(this.name);
-    //   if (value == this.name) {
-    //     return this.name;
-    //   }
-    // }
+//     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const filteredNumbers = numbers.filter((element) => {
+//    return number % 2 == 0;
+// });
+    searchName: function() {
+      if (this.searchN !== "") {
+        this.filteredContacts = this.contacts.filter((element) => {
+          return element.name == this.searchN;
+        });
+      } else {
+        this.filteredContacts = this.contacts;
+      }
+
+    }
   }
 });
